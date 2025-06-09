@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea Infantil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="fix-header">
+    <nav>
+        <div class="logo">Sueños a Crochet</div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="somos.html">Quiénes Somos</a></li>
+            <li><a href="infantil.html">Línea Infantil</a></li>
+            <li><a href="adulto.html">Línea Adultos</a></li>
+            <li><a href="hogar.html">Decoración Hogar</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><button id="verCarritoBtn">🛒 Ver Carrito</button></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="lineainfantil" class="products">
+    <h2>Línea Infantil</h2>
+    <div class="product-gallery">
+        <div class="product-card">
+            <img src="bebe1.jpg" alt="Sandalias Bebé" />
+            <h3>Sandalias Bebé</h3>
+            <p>$10000</p>
+            <button onclick="agregarAlCarrito('Sandalias Bebé', 10000, this.parentNode.querySelector('img').src)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="bebe2.jpg" alt="Gorro y Pañal Bebé" />
+            <h3>Gorro y Pañal Bebé</h3>
+            <p>$20000</p>
+            <button onclick="agregarAlCarrito('Gorro y Pañal Bebé', 20000, this.parentNode.querySelector('img').src)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="bebe3.jpg" alt="Conjunto Bebé" />
+            <h3>Conjunto Bebé</h3>
+            <p>$15000</p>
+            <button onclick="agregarAlCarrito('Conjunto Bebé', 15000, this.parentNode.querySelector('img').src)">Añadir al carrito</button>
+        </div>
+        <div class="product-card">
+            <img src="bebe4.jpg" alt="Vestido Bebé" />
+            <h3>Vestido Bebé</h3>
+            <p>$25000</p>
+            <button onclick="agregarAlCarrito('Vestido Bebé', 25000, this.parentNode.querySelector('img').src)">Añadir al carrito</button>
+        </div>        
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 <strong>Sueños a Crochet</strong>. Todos los derechos reservados.</p>
+        <p><strong>Ubicación:</strong> Barranquilla/Atlántico</p>
+        <p><strong>Correo electrónico:</strong> <a href="mailto:sueños-a-crochet@unilibre.edu.co">sueños-a-crochet@unilibre.edu.co</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+573106236455">310 623 6455</a></p>
+    </div>
+</footer>
+
+
+<div id="carritoModal" class="modal">
+    <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <ul id="listaCarrito"></ul>
+        <p>Total: $<span id="totalCarrito">0</span></p>
+        <label for="metodoPago">Método de Pago:</label>
+        <select id="metodoPago">
+            <option value="">Seleccione un método</option>
+            <option value="Nequi">Nequi</option>
+            <option value="DaviPlata">DaviPlata</option>
+            <option value="Transferencia Bancaria">Transferencia Bancaria</option>
+            <option value="Pago contra entrega">Pago contra entrega</option>
+        </select>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+</div>
+
+<script src="slider.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="fix-header">
+    <nav>
+        <div class="logo">Sueños a Crochet</div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="somos.html">Quiénes Somos</a></li>
+            <li><a href="infantil.html">Línea Infantil</a></li>
+            <li><a href="adulto.html">Línea Adultos</a></li>
+            <li><a href="hogar.html">Decoración Hogar</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><button id="verCarritoBtn">🛒 Ver Carrito</button></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="contacto" class="contact">
+    <fieldset>
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <textarea placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </fieldset>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2025 <strong>Sueños a Crochet</strong>. Todos los derechos reservados.</p>
+        <p><strong>Ubicación:</strong> Barranquilla/Atlántico</p>
+        <p><strong>Correo electrónico:</strong> <a href="mailto:sueños-a-crochet@unilibre.edu.co">sueños-a-crochet@unilibre.edu.co</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+573106236455">310 623 6455</a></p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("formContacto").addEventListener("submit", function (e) {
+    e.preventDefault(); // Evita recargar la página
+
+    // Aquí iría una llamada al servidor si tuvieras backend
+    document.getElementById("respuestaForm").style.display = "block";
+
+    // Limpia el formulario
+    e.target.reset();
+    });
+</script>
+
+
+</body>
+</html>
